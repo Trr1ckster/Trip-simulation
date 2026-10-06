@@ -1,0 +1,53 @@
+# Виртуальные окружения
+.venv/
+venv/
+env/
+ENV/
+
+# Скомпилированный Python и кэш
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Пакеты и сборка
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Тесты и проверки
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Результат восстановления маршрута (получается запуском restore_route.py)
+route_restored.csv
+out/
+
+# Редакторы и ОС
+.idea/
+.vscode/*
+!.vscode/launch.json
+!.vscode/settings.json
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Локальные файлы окружения
+.env
+.env.*
+*.local

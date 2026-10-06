@@ -1,0 +1,24 @@
+services:
+  app:
+    build: .
+    image: car-route
+    container_name: car-route
+    ports:
+      - "${PORT:-8501}:8501"
+    environment:
+      # Только для локального запуска: в интернет выкладывать без аутентификации нельзя
+      STREAMLIT_SERVER_HEADLESS: "true"
+      STREAMLIT_SERVER_ENABLE_CORS: "false"
+      STREAMLIT_SERVER_ENABLE_XSRF_PROTECTION: "false"
+      STREAMLIT_BROWSER_GATHER_USAGE_STATS: "false"
+    volumes:
+      # Маршрут с пропусками лежит в образе; том только для чтения нужен,
+      # если хочется подменить данные, не пересобирая образ:
+      # - ./route_with_losses.csv:/app/route_with_losses.csv:ro
+      #
+      # Результат восстановления сохраняется сюда, чтобы был виден на хосте
+      - restored:/app/out
+    restart: unless-stopped
+
+volumes:
+  restored:

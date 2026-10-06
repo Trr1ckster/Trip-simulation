@@ -1,0 +1,29 @@
+# Виртуальные окружения и кэш Python — в образе не нужны
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Служебное git
+.git/
+.gitignore
+
+# Редакторы и система
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Документация и черновики
+README.md
+*.log
+*.md
+
+# Секреты и локальные настройки
+.env
+.streamlit/secrets.toml
+
+# Результат восстановления (создаётся запуском restore_route.py)
+route_restored.csv
+out/

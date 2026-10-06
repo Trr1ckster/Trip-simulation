@@ -1,0 +1,8 @@
+[server]
+# В контейнере нет браузера и терминала: headless обязателен
+headless = true
+port = 8501
+address = "0.0.0.0"
+
+[browser]
+gatherUsageStats = false
